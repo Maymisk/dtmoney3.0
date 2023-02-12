@@ -1,92 +1,68 @@
 {
-  "transactions": [
-    {
-      "id": 1,
-      "description": "Website development",
-      "price": 10000,
-      "category": "Job",
-      "type": "income",
-      "createdAt": "2022-08-21T22:43:43.305Z"
-    },
-    {
-      "id": 2,
-      "description": "Pastel",
-      "price": 15,
-      "category": "Food",
-      "type": "outflow",
-      "createdAt": "2022-08-21T22:43:43.305Z"
-    },
-    {
-      "description": "Venda de órgão",
-      "price": 15000,
-      "category": "Job",
-      "type": "income",
-      "createdAt": "2022-08-22T00:00:22.964Z",
-      "id": 3
-    },
-    {
-      "description": "Dinner",
-      "price": 50,
-      "category": "Food",
-      "type": "outflow",
-      "createdAt": "2022-08-22T22:00:23.181Z",
-      "id": 4
-    },
-    {
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste minima molestias, aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "price": 1000,
-      "category": "category",
-      "type": "outflow",
-      "createdAt": "2022-08-22T22:06:01.002Z",
-      "id": 5
-    },
-    {
-      "description": "Some food",
-      "price": 10,
-      "category": "Food",
-      "type": "income",
-      "createdAt": "2022-08-22T22:25:08.857Z",
-      "id": 6
-    },
-    {
-      "description": "Coke",
-      "price": 10,
-      "category": "Food",
-      "type": "income",
-      "createdAt": "2022-08-22T22:25:14.251Z",
-      "id": 7
-    },
-    {
-      "description": "Gold steak",
-      "price": 1000,
-      "category": "Food",
-      "type": "income",
-      "createdAt": "2022-08-22T22:25:28.150Z",
-      "id": 8
-    },
-    {
-      "description": "foto de coca com pastel",
-      "price": 500,
-      "category": "Luxo",
-      "type": "income",
-      "createdAt": "2023-02-12T15:51:25.948Z",
-      "id": 9
-    },
-    {
-      "description": "só um postzinho de teste, vocês só podem postar as foto com as mudas blz? 🥱",
-      "price": 10,
-      "category": "Alimentação",
-      "type": "outflow",
-      "createdAt": "2023-02-12T15:51:45.431Z",
-      "id": 10
-    },
-    {
-      "description": "só um postzinho de teste, vocês só podem postar as foto com as mudas blz? 🥱",
-      "price": 10,
-      "category": "Alimentação",
-      "type": "outflow",
-      "createdAt": "2023-02-12T16:04:28.142Z",
-      "id": 11
-    }
-  ]
+	"transactions": [
+		{
+			"id": 1,
+			"description": "Website development",
+			"price": 10000,
+			"category": "Job",
+			"type": "income",
+			"createdAt": "2022-08-21T22:43:43.305Z"
+		},
+		{
+			"id": 2,
+			"description": "Pastel",
+			"price": 15,
+			"category": "Food",
+			"type": "outflow",
+			"createdAt": "2022-08-21T22:43:43.305Z"
+		},
+		{
+			"description": "Venda de órgão",
+			"price": 15000,
+			"category": "Job",
+			"type": "income",
+			"createdAt": "2022-08-22T00:00:22.964Z",
+			"id": 3
+		},
+		{
+			"description": "Dinner",
+			"price": 50,
+			"category": "Food",
+			"type": "outflow",
+			"createdAt": "2022-08-22T22:00:23.181Z",
+			"id": 4
+		},
+		{
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste minima",
+			"price": 1000,
+			"category": "category",
+			"type": "outflow",
+			"createdAt": "2022-08-22T22:06:01.002Z",
+			"id": 5
+		},
+		{
+			"description": "Some food",
+			"price": 10,
+			"category": "Food",
+			"type": "income",
+			"createdAt": "2022-08-22T22:25:08.857Z",
+			"id": 6
+		},
+		{
+			"description": "Coke",
+			"price": 10,
+			"category": "Food",
+			"type": "income",
+			"createdAt": "2022-08-22T22:25:14.251Z",
+			"id": 7
+		},
+		{
+			"description": "Gold steak",
+			"price": 1000,
+			"category": "Food",
+			"type": "income",
+			"createdAt": "2022-08-22T22:25:28.150Z",
+			"id": 8
+		}
+	]
 }
