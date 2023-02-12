@@ -9,6 +9,8 @@ export const SummaryContainer = styled.div`
 	gap: 2rem;
 
 	margin: -5rem auto 0;
+
+	justify-content: center;
 `;
 
 interface ISummaryCardProps {
@@ -37,6 +39,20 @@ export const SummaryCard = styled.div<ISummaryCardProps>`
 		margin-top: 1rem;
 
 		line-height: 140%;
+	}
+
+	@media (max-width: 1024px) {
+		&:nth-child(3) {
+			width: 352px;
+			margin-left: calc((352px + 2rem) / 2);
+		}
+	}
+
+	@media (max-width: 767px) {
+		&:nth-child(3) {
+			width: 100%;
+			margin-left: 0;
+		}
 	}
 `;
 

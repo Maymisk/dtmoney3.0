@@ -44,6 +44,10 @@ export const ModalContent = styled(DialogContent)`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	@media (max-width: 768px) {
+		min-width: 20rem;
+	}
 `;
 
 export const NewTransactionForm = styled.form`

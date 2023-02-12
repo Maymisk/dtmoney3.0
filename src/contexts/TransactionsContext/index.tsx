@@ -30,12 +30,13 @@ interface IFetchTransactionsProps {
 type FetchTransactions = ({
 	query,
 	page,
-}: IFetchTransactionsProps) => Promise<number>;
+}: IFetchTransactionsProps) => Promise<void>;
 
 type CreateTransactions = (data: CreateTransactionData) => Promise<void>;
 
 interface ITransactionContextData {
 	transactions: ITransaction[];
+	totalTransactions: number;
 	fetchTransactions: FetchTransactions;
 	createTransaction: CreateTransactions;
 }
@@ -48,6 +49,7 @@ const TransactionsContext = createContext({} as ITransactionContextData);
 
 export function TransactionsProvider({ children }: ITransactionsProviderProps) {
 	const [transactions, setTransactions] = useState([] as ITransaction[]);
+	const [totalTransactions, setTotalTransactions] = useState(0);
 
 	const fetchTransactions = useCallback(
 		async ({ query, page = 1 }: IFetchTransactionsProps) => {
@@ -61,9 +63,9 @@ export function TransactionsProvider({ children }: ITransactionsProviderProps) {
 
 			const totalCount = Number(response.headers['x-total-count']);
 
-			setTransactions(response.data);
+			setTotalTransactions(totalCount);
 
-			return totalCount;
+			setTransactions(response.data);
 		},
 		[]
 	);
@@ -76,13 +78,19 @@ export function TransactionsProvider({ children }: ITransactionsProviderProps) {
 			});
 
 			setTransactions(prevState => [response.data, ...prevState]);
+			setTotalTransactions(prevState => prevState + 1);
 		},
 		[]
 	);
 
 	return (
 		<TransactionsContext.Provider
-			value={{ transactions, createTransaction, fetchTransactions }}
+			value={{
+				transactions,
+				totalTransactions,
+				createTransaction,
+				fetchTransactions,
+			}}
 		>
 			{children}
 		</TransactionsContext.Provider>

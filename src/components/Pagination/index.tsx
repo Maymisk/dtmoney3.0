@@ -1,11 +1,13 @@
 import { CaretLeft, CaretRight } from 'phosphor-react';
+import { useEffect, useState } from 'react';
+import { useTransactions } from '../../contexts/TransactionsContext';
 import { range } from '../../utils/range';
 import { PageIcon, PageIconsContainer, PaginationContainer } from './styles';
 
 interface IPaginationProps {
 	activePage: number;
-	setActivePage: React.Dispatch<React.SetStateAction<number>>;
 	transactionsCount: number;
+	setActivePage(page: number): void;
 }
 
 export function Pagination({
@@ -19,13 +21,13 @@ export function Pagination({
 	function handleGoToNextPage() {
 		if (activePage + 1 > totalPages) return;
 
-		setActivePage(prevState => prevState + 1);
+		setActivePage(activePage + 1);
 	}
 
 	function handleGoToPreviousPage() {
 		if (activePage - 1 < 1) return;
 
-		setActivePage(prevState => prevState - 1);
+		setActivePage(activePage - 1);
 	}
 
 	function handleGoToPage(page: number) {

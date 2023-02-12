@@ -17,16 +17,30 @@ export const Table = styled.table`
 		td {
 			padding: 1.25rem 2rem;
 
-			word-break: break-all;
-
 			&:first-child {
-				width: 40%;
+				max-width: 110px;
 
 				border-radius: 6px 0 0 6px;
+
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
 			}
 
 			&:last-child {
 				border-radius: 0 6px 6px 0;
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		tr {
+			td {
+				padding: 0.75rem 1.5rem;
+			}
+
+			td:nth-of-type(4) {
+				display: none;
 			}
 		}
 	}

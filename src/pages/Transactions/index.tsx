@@ -6,19 +6,27 @@ import { TransactionsTable } from './components/TransactionsTable';
 import { TransactionsContainer } from './styles';
 
 export function Transactions() {
-	const { fetchTransactions } = useTransactions();
+	const { fetchTransactions, totalTransactions } = useTransactions();
+
 	const [activePage, setActivePage] = useState(1);
 	const [isFetching, setIsFetching] = useState(false);
 
-	const [transactionsCount, setTransactionsCount] = useState(0);
+	function changeActivePage(page: number) {
+		setActivePage(page);
+	}
 
 	useEffect(() => {
-		setIsFetching(true);
+		async function fetch() {
+			setIsFetching(true);
 
-		fetchTransactions({ page: activePage }).then(value => {
-			setTransactionsCount(value);
+			await fetchTransactions({
+				page: activePage,
+			});
+
 			setIsFetching(false);
-		});
+		}
+
+		fetch();
 	}, [activePage]);
 
 	return (
@@ -29,8 +37,8 @@ export function Transactions() {
 
 			<Pagination
 				activePage={activePage}
-				setActivePage={setActivePage}
-				transactionsCount={transactionsCount}
+				setActivePage={changeActivePage}
+				transactionsCount={totalTransactions}
 			/>
 		</TransactionsContainer>
 	);
