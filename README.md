@@ -8,7 +8,7 @@ An application to help you keep track of your money.
 
 This is version 3.0
 
-<a href="">Version 1.0</a>&nbsp;&nbsp;
+<a href="https://github.com/Maymisk/dev.finance">Version 1.0</a>&nbsp;&nbsp;
 <a href="https://github.com/Maymisk/dtmoney2.0">Version 2.0</a>
 
 
